@@ -48,7 +48,7 @@ export default function RootLayout({
                       <Link href="/shop/cheesecakes">Cheesecakes</Link>
                     </li>
                     <li>
-                      <Link href="/shop">All Pies</Link>
+                      <Link href="/shop/all">All Pies</Link>
                     </li>
                   </ul>
                 </li>
