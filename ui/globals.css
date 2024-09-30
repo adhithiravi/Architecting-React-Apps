@@ -196,7 +196,6 @@ body {
 
 #hover-menu {
   border: 1px solid white;
-  display: none;
   left: 0;
   padding: 0;
   position: absolute;
@@ -381,7 +380,7 @@ a.shop-dropdown span {
   width: 100%;
 }
 
-.pie-item div.add-to-cart p a {
+.pie-item div.add-to-cart p button {
   align-items: center;
   color: black;
   display: flex;
@@ -392,6 +391,14 @@ a.shop-dropdown span {
   padding: 0;
   text-decoration: none;
   width: 100%;
+}
+
+.add-to-cart button {
+  transition: transform 0.1s ease;
+}
+
+.add-to-cart button:active {
+  transform: scale(0.95);
 }
 
 .pie-item div.pie-info {

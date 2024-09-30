@@ -1,12 +1,11 @@
 import Image from "next/image";
 import Script from "next/script";
-import heroOneImage from "../public/images/hero-1.png";
-import heroTwoImage from "../public/images/hero-2.png";
-import heroThreeImage from "../public/images/hero-3.png";
-import pieOneImage from "../public/images/pie-1.png";
-import pieTwoImage from "../public/images/pie-2.png";
-import pieThreeImage from "../public/images/pie-3.png";
-import Button from "../ui/components/Button/Button";
+import heroOneImage from "../public/images/Hero/hero1.jpg";
+import heroTwoImage from "../public/images/Hero/hero2.jpg";
+import heroThreeImage from "../public/images/Hero/hero3.jpg";
+import pieOneImage from "../public/images/Seasonal/pie-1.png";
+import pieTwoImage from "../public/images/Seasonal/pie-2.png";
+import pieThreeImage from "../public/images/Seasonal/pie-3.png";
 
 export default function Home() {
   return (
@@ -47,7 +46,6 @@ export default function Home() {
         <div className="pie-grid">
           <div className="pie-item">
             <Image src={pieOneImage} alt="image of Classic Apple Pie" />
-            <Button text="+ Add to cart" />
 
             <div className="pie-info">
               <h4>Classic Apple Pie</h4>
@@ -56,7 +54,6 @@ export default function Home() {
           </div>
           <div className="pie-item">
             <Image src={pieTwoImage} alt="image of Pumpkin Pie" />
-            <Button text="+ Add to cart" />
 
             <div className="pie-info">
               <h4>Classic Apple Pie</h4>
@@ -65,7 +62,6 @@ export default function Home() {
           </div>
           <div className="pie-item">
             <Image src={pieThreeImage} alt="image of Chocolate Pecan Pie" />
-            <Button text="+ Add to cart" />
 
             <div className="pie-info">
               <h4>Classic Apple Pie</h4>
@@ -75,7 +71,6 @@ export default function Home() {
         </div>
       </section>
       <Script src="/scripts/carousel.js" strategy="beforeInteractive" />
-      <Script src="/scripts/dropdown.js" strategy="beforeInteractive" />
     </>
   );
 }

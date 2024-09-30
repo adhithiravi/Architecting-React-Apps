@@ -7,6 +7,7 @@ import logoImage from "../public/images/logo.png";
 import searchIcon from "../public/images/search-icon.png";
 import profileIcon from "../public/images/profile-icon.png";
 import cartIcon from "../public/images/cart-icon.png";
+import Dropdown from "@/ui/components/Dropdown/Dropdown";
 
 export const metadata: Metadata = {
   title: "Bethany's Pie Shop",
@@ -31,35 +32,7 @@ export default function RootLayout({
                 <Image src={logoImage} alt="Bethany's Pie Shop Logo" />
               </Link>
             </h1>
-            <nav>
-              <ul>
-                <li>
-                  <Link className="shop-dropdown" href="#">
-                    Shop <span>&#8964;</span>
-                  </Link>
-                  <ul id="hover-menu">
-                    <li>
-                      <Link href="/shop/seasonal">Seasonal Pies</Link>
-                    </li>
-                    <li>
-                      <Link href="/shop/fruit">Fruit Pies</Link>
-                    </li>
-                    <li>
-                      <Link href="/shop/cheesecakes">Cheesecakes</Link>
-                    </li>
-                    <li>
-                      <Link href="/shop/all">All Pies</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <Link href="/contact">Contact</Link>
-                </li>
-                <li>
-                  <Link href="/register">Register</Link>
-                </li>
-              </ul>
-            </nav>
+            <Dropdown />
             <div className="header-icons">
               <ul>
                 <li>
