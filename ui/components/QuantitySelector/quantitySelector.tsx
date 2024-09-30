@@ -1,8 +1,5 @@
 "use client";
-
-import { updateCartItem } from "@/app/lib/api";
 import React, { useState } from "react";
-import Link from "next/link";
 
 interface QuanitySelectorProps {
   item: {
@@ -20,11 +17,6 @@ export default function QuantitySelector({ item }: QuanitySelectorProps) {
   const handleQuantityChange = async (newQuantity: number) => {
     if (newQuantity < 1) return;
     setQuantity(newQuantity);
-    try {
-      await updateCartItem(item.id, newQuantity);
-    } catch (error) {
-      console.error("Failed to update cart item:", error);
-    }
   };
 
   return (
