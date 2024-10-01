@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { addToCart } from "@/app/lib/api";
 
 interface AddToCartButtonProps {
   id: number;
@@ -16,12 +15,8 @@ export default function AddToCartButton({
   price,
   imageUrl,
 }: AddToCartButtonProps) {
-  const handleAddToCart = async () => {
-    try {
-      await addToCart(id, name, price, 1, imageUrl);
-    } catch (error) {
-      console.error("Failed to add item to cart:", error);
-    }
+  const handleAddToCart = () => {
+    // code to add to cart
   };
 
   return (
