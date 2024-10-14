@@ -1,7 +1,13 @@
-export default function Cart() {
+export default async function Cart() {
   return (
-    <>
-      <h2>View your cart</h2>
-    </>
+    <section className="main-content">
+      <h2>
+        Shopping Cart
+        <hr />
+      </h2>
+      <div className="cart-wrapper">
+        <div className="cart-items-wrapper"></div>
+      </div>
+    </section>
   );
 }

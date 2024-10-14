@@ -1,21 +1,13 @@
 "use client";
+
+import { CartItem } from "@/types/types";
 import React, { useState } from "react";
 
-interface QuanitySelectorProps {
-  item: {
-    id: number;
-    name: string;
-    price: number;
-    quantity: number;
-    imageUrl: string;
-  };
-}
-
-export default function QuantitySelector({ item }: QuanitySelectorProps) {
-  const [quantity, setQuantity] = useState(item.quantity);
+export default function QuantitySelector({ price, quantity }: CartItem) {
+  const [currentQuantity, setQuantity] = useState(quantity);
 
   const handleQuantityChange = async (newQuantity: number) => {
-    if (newQuantity < 1) return;
+    if (currentQuantity < 1) return;
     setQuantity(newQuantity);
   };
 
@@ -24,15 +16,15 @@ export default function QuantitySelector({ item }: QuanitySelectorProps) {
       <div className="quantity-selector">
         <button
           onClick={() => {
-            handleQuantityChange(quantity - 1);
+            handleQuantityChange(currentQuantity - 1);
           }}
         >
           -
         </button>
-        <span>{quantity}</span>
+        <span>{currentQuantity}</span>
         <button
           onClick={() => {
-            handleQuantityChange(quantity + 1);
+            handleQuantityChange(currentQuantity + 1);
           }}
         >
           +
@@ -40,7 +32,7 @@ export default function QuantitySelector({ item }: QuanitySelectorProps) {
       </div>
       <div className="cart-item-price-wrapper">
         <p className="cart-item-price">
-          Total: ${(item.price * quantity).toFixed(2)}
+          Total: ${(price * currentQuantity).toFixed(2)}
         </p>
       </div>
     </div>

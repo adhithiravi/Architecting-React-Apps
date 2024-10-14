@@ -1,13 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
-interface AddToCartButtonProps {
-  id: number;
+type AddToCartButtonProps = {
+  id: string;
   name: string;
   price: number;
   imageUrl: string;
-}
+};
 
 export default function AddToCartButton({
   id,
@@ -15,14 +15,16 @@ export default function AddToCartButton({
   price,
   imageUrl,
 }: AddToCartButtonProps) {
-  const handleAddToCart = () => {
-    // code to add to cart
-  };
+  const [loading, setLoading] = useState(false);
+
+  const handleAddToCart = async () => {};
 
   return (
     <div className="add-to-cart">
       <p>
-        <button onClick={handleAddToCart}>+ ADD TO CART</button>
+        <button onClick={handleAddToCart} disabled={loading}>
+          {loading ? "Adding..." : "+ ADD TO CART"}
+        </button>
       </p>
     </div>
   );
