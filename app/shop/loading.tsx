@@ -1,10 +1,10 @@
-import LoadingSkeleton from "./LoadingSkeleton";
+import LoadingSkeleton from "@/ui/components/Loading/LoadingSkeleton";
 
-export default function Loading({ title }: { title: string }) {
+export default function Loading() {
   return (
     <section className="main-content">
       <h2>
-        {title}
+        Menu Items
         <hr />
       </h2>
       <div className="min-h-screen flex flex-col justify-center items-center">

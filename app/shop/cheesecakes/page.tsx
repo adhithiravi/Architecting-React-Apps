@@ -4,7 +4,7 @@ import Loading from "@/ui/components/Loading/Loading";
 
 export default async function Cheesecakes() {
   return (
-    <Suspense fallback={<Loading />}>
+    <Suspense fallback={<Loading title="Cheesecakes" />}>
       <CheesecakesComponent />;
     </Suspense>
   );
