@@ -11,7 +11,7 @@ const piesData: Record<
   fruit: [
     {
       id: 1,
-      name: "Apple Pie",
+      name: "Blueberry Pizza Pie",
       price: 10,
       imageUrl: "/images/Fruit/fruit1.png",
     },
@@ -33,13 +33,13 @@ const piesData: Record<
       id: 4,
       name: "Pumpkin Pie",
       price: 15,
-      imageUrl: "/images/Seasonal/pie-1.png",
+      imageUrl: "/images/Seasonal/pie-2.png",
     },
     {
       id: 5,
-      name: "Apple Pecan Pie",
+      name: "Apple Pie",
       price: 18,
-      imageUrl: "/images/Seasonal/pie-2.png",
+      imageUrl: "/images/Seasonal/pie-1.png",
     },
     {
       id: 6,
@@ -109,13 +109,13 @@ const piesData: Record<
       id: 4,
       name: "Pumpkin Pie",
       price: 15,
-      imageUrl: "/images/Seasonal/pie-1.png",
+      imageUrl: "/images/Seasonal/pie-2.png",
     },
     {
       id: 5,
       name: "Apple Pecan Pie",
       price: 18,
-      imageUrl: "/images/Seasonal/pie-2.png",
+      imageUrl: "/images/Seasonal/pie-1.png",
     },
     {
       id: 6,
