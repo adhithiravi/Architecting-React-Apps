@@ -4,7 +4,8 @@ import { ItemInfo } from "@/ui/components/ItemInfo/ItemInfo";
 async function fetchAllPies() {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/pies?category=all`
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/pies?category=all`,
+      { cache: "no-store" }
     );
     const pies = await res.json();
     return pies;

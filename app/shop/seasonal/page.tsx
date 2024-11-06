@@ -5,7 +5,8 @@ export const revalidate = 300;
 async function fetchSeasonal() {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/pies?category=seasonal`
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/pies?category=seasonal`,
+      { cache: "no-store" }
     );
     const pies = await res.json();
     return pies;

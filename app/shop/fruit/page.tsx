@@ -3,7 +3,8 @@ import { ItemInfo } from "@/ui/components/ItemInfo/ItemInfo";
 async function fetchFruitPies() {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/pies?category=fruit`
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/pies?category=fruit`,
+      { cache: "no-store" }
     );
     const pies = await res.json();
     return pies;
