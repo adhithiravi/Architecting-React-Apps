@@ -1,15 +1,18 @@
 import { ItemInfo } from "@/ui/components/ItemInfo/ItemInfo";
 
 async function fetchCheesecakes() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/pies?category=cheesecakes`,
-    { cache: "no-store" }
-  );
-  const pies = await res.json();
-  return pies;
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/pies?category=cheesecakes`,
+      { cache: "no-store" }
+    );
+    const pies = await res.json();
+    return pies;
+  } catch (error) {
+    console.error("Failed to parson JSON:", error);
+  }
 }
 
-// Dynamic data fetching, no cache
 export default async function CheesecakesComponent() {
   const pies = await fetchCheesecakes();
 
