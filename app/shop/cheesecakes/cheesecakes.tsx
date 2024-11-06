@@ -1,6 +1,5 @@
 import { ItemInfo } from "@/ui/components/ItemInfo/ItemInfo";
 
-// Dynamic data fetching, no cache
 async function fetchCheesecakes() {
   try {
     const res = await fetch(

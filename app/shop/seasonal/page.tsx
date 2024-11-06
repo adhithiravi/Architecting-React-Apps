@@ -1,12 +1,12 @@
 import { ItemInfo } from "@/ui/components/ItemInfo/ItemInfo";
 
+export const dynamic = "force-dynamic";
 export const revalidate = 300;
 
 async function fetchSeasonal() {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/pies?category=seasonal`,
-      { cache: "no-store" }
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/pies?category=seasonal`
     );
     const pies = await res.json();
     return pies;

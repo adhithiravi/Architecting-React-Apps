@@ -1,11 +1,11 @@
 import { ItemInfo } from "@/ui/components/ItemInfo/ItemInfo";
 
-// Static data fetching
+export const dynamic = "force-dynamic";
+
 async function fetchAllPies() {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/pies?category=all`,
-      { cache: "no-store" }
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/pies?category=all`
     );
     const pies = await res.json();
     return pies;
